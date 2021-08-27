@@ -1,5 +1,7 @@
 <?php
 
+include 'content.html';
+
 $_ENV['APP_ENV'] = 'test';
 
 function sendMessage()
@@ -52,5 +54,3 @@ if ($_ENV['APP_ENV'] === 'test') {
     print($return);
     print("\n");
 }
-
-include 'content.html';
