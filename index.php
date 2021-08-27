@@ -39,20 +39,18 @@ function sendMessage()
     return $response;
 }
 
-// $response = sendMessage();
+$response = sendMessage();
 
-// if ($_ENV['APP_ENV'] === 'test') {
-//     $return["allresponses"] = $response;
-//     $return = json_encode($return);
-//     $data = json_decode($response, true);
-//     print_r($data);
-//     $id = $data['id'];
-//     print_r($id);
-//     print("\n\nJSON received:\n");
-//     print($return);
-//     print("\n");
-// }
+if ($_ENV['APP_ENV'] === 'test') {
+    $return["allresponses"] = $response;
+    $return = json_encode($return);
+    $data = json_decode($response, true);
+    print_r($data);
+    $id = $data['id'];
+    print_r($id);
+    print("\n\nJSON received:\n");
+    print($return);
+    print("\n");
+}
+
 include 'content.html';
-// echo "<h1>Hey salut,</h1> <p>J'espère que tu vas bien, tu es bien chez Jérôme Farin, j'ai été notifié que tu es devant la porte, si je suis à la maison, tu devrais me voir rapidement sinon tu peux m'appeler au <a target=\"_blank\" href=\"tel:+33644079372\">06 44 07 93 72</a> pour que l'on trouve un arrangement</p>";
-
-// echo "<h1>Hey salut,</h1> <p>J'espère que tu vas bien, tu es bien chez Jérôme Farin et Marie Jallet, nous avons été notifié que tu es devant la porte, si quelqu'un est à la maison, tu devrais voir rapidement quelqu'un sinon tu peux nous appeler au <a target=\"_blank\" href=\"tel:+33644079372\">06 44 07 93 72</a> ou au <a target=\"_blank\" href=\"tel:+33781420228\">07 81 42 02 28</a> pour que l'on trouve un arrangement</p>";
