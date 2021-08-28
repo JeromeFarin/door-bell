@@ -2,6 +2,10 @@
 
 include 'content.html';
 
+if (!isset($_GET['ringing'])) {
+    die;
+}
+
 $_ENV['APP_ENV'] = 'test';
 
 function sendMessage()
